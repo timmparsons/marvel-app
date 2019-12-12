@@ -6,7 +6,7 @@ class Form extends React.Component {
       <div>
         <form onSubmit={this.props.getCharacter}>
           <input type="text" name="character" placeholder="Character" />
-          <button>Get Character</button>
+          <button>Find your character</button>
         </form>
       </div>
     )
