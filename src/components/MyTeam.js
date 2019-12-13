@@ -17,23 +17,24 @@ class MyTeam extends React.Component {
   }
   render() {
   return (
-      <div className="team-main-container">
-        {this.props.team.length > 0 && <h3>My Team</h3>}
-        <div className="team-container" style={divWrapperStyles}>
-        {this.props.team.map((character,index) => (
-          <div className="team-card" style={teamItemStyles}>
-            <p key={index}>{character.name}</p>
-            <img src={`${character.image}/landscape_amazing.jpg`} alt="character"/>
-            <div>
-              <button className="addRemoveButton" onClick={e => this.onClick(character)}>Remove</button>
+    <div>
+      {this.props.team.length > 0 && <div className="team-container team-container__color">
+          <h3>My Team</h3>
+          <div className="team-wrapper-container" style={divWrapperStyles}>
+          {this.props.team.map((character,index) => (
+            <div className="team-card" style={teamItemStyles}>
+              <p key={index}>{character.name}</p>
+              <img src={`${character.image}/landscape_amazing.jpg`} alt="character"/>
+              <div>
+                <button className="addRemoveButton" onClick={e => this.onClick(character)}>Remove</button>
+              </div>
             </div>
-          </div>
-          ))}
+            ))}
+        </div>
       </div>
-      </div>
-      
-    
-  )
- }
+      }
+    </div>   
+    )
+  }
 }
 export default MyTeam;

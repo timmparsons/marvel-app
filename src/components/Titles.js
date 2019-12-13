@@ -9,7 +9,7 @@ class Titles extends React.Component {
     return (
       <div className="title-section">
         <img src={logo} className="logo" style={logoStyles} alt="logo"/>
-        <h3>Pick a character</h3>
+        <h3 className="header__white">Pick a character</h3>
       </div>
     )
   }

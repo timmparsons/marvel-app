@@ -1,7 +1,16 @@
+body {
+  background-color: #1f1f1f;
+}
+/* Headers */
+.header__white{
+  color: white;
+}
+/* Character Input section */
 .input-section {
   text-align: center;
   padding-top: 25px;
 }
+
 input[type=text] {
   width: 50%;
   padding: 12px 20px;
@@ -12,6 +21,7 @@ input[type=text] {
   box-sizing: border-box;
 }
 
+/* Character tile */
 .character-tile {
   border: 1px solid lightgray;
   margin: 0 auto;
@@ -21,6 +31,11 @@ input[type=text] {
   margin-top: 50px;
   -webkit-transition: box-shadow 1s; /* For Safari 3.1 to 6.0 */
   transition: box-shadow 1s;
+}
+
+.character-tile__color {
+  background: white;
+  color: black;
 }
 
 .character-tile:hover {
@@ -33,6 +48,7 @@ input[type=text] {
   margin-top: 50px;
 }
 
+/* Add and Remove Buttons */
 .addRemoveButton {
   width: 50%;
   background-color: white;
@@ -52,6 +68,12 @@ input[type=text] {
   border: 2px solid white;
 }
 
-.team-main-container {
+/* Team section */
+.team-container {
   margin: 50px;
+  padding: 50px;
+}
+
+.team-container__color {
+  background: white;
 }

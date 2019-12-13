@@ -9,7 +9,7 @@ class Character extends React.Component {
   return (
     <div>
       {this.props.character.name && 
-        <div className="character-tile">
+        <div className="character-tile character-tile__color">
           <h2>{this.props.character.name}</h2>
           <p>{this.props.character.description}</p>
           <img src={`${this.props.character.thumbnail.path}/portrait_xlarge.jpg`} alt="character"/>
