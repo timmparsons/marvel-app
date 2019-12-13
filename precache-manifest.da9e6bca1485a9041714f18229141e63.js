@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f8e37aef45eaee2807d39336ea4c2c2",
+    "revision": "2be9f9bc61204e7c177aca3d48edaf8b",
     "url": "/marvel-app/index.html"
   },
   {
