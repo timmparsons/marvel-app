@@ -1,18 +1,37 @@
 import React from 'react';
 
+const divWrapperStyles = {
+  "display": "flex",
+  "justifyContent":"space-around"
+}
+
+const teamItemStyles = {
+  "border": "1px solid red",
+  "margin": "auto",
+  "padding": "30px"
+}
+
 class MyTeam extends React.Component {
   onClick(character) {
     this.props.removeCharacter(character)
   }
   render() {
   return (
-      <div>
+      <div className="team-main-container">
+        {this.props.team.length > 0 && <h3>My Team</h3>}
+        <div className="team-container" style={divWrapperStyles}>
         {this.props.team.map((character,index) => (
-          <div className="team-card">
-            <p key={index}>{character.name}</p><button onClick={e => this.onClick(character)}>X</button>
+          <div className="team-card" style={teamItemStyles}>
+            <p key={index}>{character.name}</p>
+            <img src={`${character.image}/landscape_amazing.jpg`} alt="character"/>
+            <div>
+              <button className="addRemoveButton" onClick={e => this.onClick(character)}>Remove</button>
+            </div>
           </div>
           ))}
       </div>
+      </div>
+      
     
   )
  }

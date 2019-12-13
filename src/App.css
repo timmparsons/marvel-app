@@ -2,6 +2,15 @@
   text-align: center;
   padding-top: 25px;
 }
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 .character-tile {
   border: 1px solid lightgray;
@@ -10,13 +19,39 @@
   padding: 15px;
   width: 50%;
   margin-top: 50px;
+  -webkit-transition: box-shadow 1s; /* For Safari 3.1 to 6.0 */
+  transition: box-shadow 1s;
 }
 
 .character-tile:hover {
   border: 1px solid darkgray;
+  box-shadow: 5px 5px 10px #c7c6c6;
   margin: 0 auto;
   border-radius: 5px;
   padding: 15px;
   width: 50%;
   margin-top: 50px;
+}
+
+.addRemoveButton {
+  width: 50%;
+  background-color: white;
+  color: #ed151e;
+  font-size: 20px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #ed151e;
+  border-radius: 4px;
+  -webkit-transition: background-color 1s; /* For Safari 3.1 to 6.0 */
+  transition: background-color 1s;
+}
+
+.addRemoveButton:hover {
+  background-color: #ed151e;
+  color: white;
+  border: 2px solid white;
+}
+
+.team-main-container {
+  margin: 50px;
 }

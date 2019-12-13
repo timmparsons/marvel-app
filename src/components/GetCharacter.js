@@ -13,14 +13,13 @@ class GetCharacter extends React.Component {
       character: [],
       team: []
     }
-
-    //this.addToTeam = this.addToTeam.bind(this);
   }
 
 addToTeam = (event) => {
   let newMember = {
     id: event.id,
-    name: event.name
+    name: event.name,
+    image: event.thumbnail.path
   }
   let currentTeam = this.state.team.slice(0);
   currentTeam.push(newMember);
@@ -67,7 +66,7 @@ getCharacter = (event) => {
             character={character}
             addToTeam={this.addToTeam}/>
           <MyTeam 
-            team ={this.state.team}
+            team={this.state.team}
             removeCharacter={this.removeCharacter}/>
         </div>
       )
