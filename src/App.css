@@ -1,5 +1,18 @@
+/* Variables */
+
+:root {
+  --marvel-red:  #ed151e;
+}
+
+/* Web App Styling */
+
 body {
   background-color: #1f1f1f;
+}
+
+h1,h2,h3,h4,p, button, input {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
 }
 /* Headers */
 .header__white{
@@ -50,30 +63,59 @@ input[type=text] {
 
 /* Add and Remove Buttons */
 .addRemoveButton {
-  width: 50%;
-  background-color: white;
-  color: #ed151e;
+  background-color: var(--marvel-red);
+  color: white;
   font-size: 20px;
-  padding: 14px 20px;
+  padding: 8px 10px;
   margin: 8px 0;
-  border: 2px solid #ed151e;
-  border-radius: 4px;
-  -webkit-transition: background-color 1s; /* For Safari 3.1 to 6.0 */
-  transition: background-color 1s;
 }
 
 .addRemoveButton:hover {
-  background-color: #ed151e;
-  color: white;
-  border: 2px solid white;
+  background-color: var(--marvel-red);
 }
 
 /* Team section */
 .team-container {
   margin: 50px;
-  padding: 50px;
 }
 
-.team-container__color {
-  background: white;
+.team-container h2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
 }
+
+.team-image {
+  border-bottom: 4px solid var(--marvel-red);
+}
+
+.team-card__border, .character-tile {
+  --notchSize: 20px;
+  clip-path: 
+    polygon(0 0, 
+    0 0, 
+    100% 0, 
+    100% 5%, 
+    100% 95%, 
+    calc(100% - var(--notchSize)) 100%, 
+    10% 100%, 
+    0% 100%);
+}
+
+.team-image-name {
+  font-weight: bold;
+  float: left;
+  padding: 10px 15px;
+}
+
+.team-image-bottom__color {
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  position: relative;
+  top: -3px;
+}
+

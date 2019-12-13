@@ -6,9 +6,7 @@ const divWrapperStyles = {
 }
 
 const teamItemStyles = {
-  "border": "1px solid red",
-  "margin": "auto",
-  "padding": "30px"
+  "margin": "auto"
 }
 
 class MyTeam extends React.Component {
@@ -19,14 +17,18 @@ class MyTeam extends React.Component {
   return (
     <div>
       {this.props.team.length > 0 && <div className="team-container team-container__color">
-          <h3>My Team</h3>
+          <h2>My Team</h2>
           <div className="team-wrapper-container" style={divWrapperStyles}>
           {this.props.team.map((character,index) => (
             <div className="team-card" style={teamItemStyles}>
-              <p key={index}>{character.name}</p>
-              <img src={`${character.image}/landscape_amazing.jpg`} alt="character"/>
-              <div>
-                <button className="addRemoveButton" onClick={e => this.onClick(character)}>Remove</button>
+              <div className="team-card__border">
+                <img src={`${character.image}/portrait_xlarge.jpg`} alt="character" className="team-image"/>
+                  <div className="team-image-bottom__color">
+                    <p key={index} className="team-image-name">{character.name}</p>
+                  <div className="team-bg__slidedown">
+                    <button className="addRemoveButton" onClick={e => this.onClick(character)}>Remove</button>
+                  </div>
+                </div>
               </div>
             </div>
             ))}
