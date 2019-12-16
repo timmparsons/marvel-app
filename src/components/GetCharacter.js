@@ -5,6 +5,7 @@ import Form from './Form';
 import Titles from'./Titles';
 import Character from './Character';
 import MyTeam from './MyTeam';
+import CharacterList from './CharacterList'
 
 class GetCharacter extends React.Component {
   constructor(props) {
@@ -60,6 +61,7 @@ getCharacter = (event) => {
     const {character} = this.state;
     return (
         <div className="input-section">
+          <CharacterList list={this.state.character}/>
           <Titles />
           <Form value={this.state.name} getCharacter={this.getCharacter}/> 
           <Character 
