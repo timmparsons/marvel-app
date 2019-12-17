@@ -6,6 +6,7 @@ const listColor = {
   "color":"white"
 }
 
+
 class CharacterList extends React.Component {
   constructor(props) {
     super(props)
@@ -14,8 +15,10 @@ class CharacterList extends React.Component {
       data: []
     }
   }
+
+
   componentDidMount(){
-    let baseUrl = `https://gateway.marvel.com/v1/public/characters?`
+    let baseUrl = `https://gateway.marvel.com/v1/public/comics?`
     const publicKey = "f8ad949f605c15a6d46e8fe3d0a348fe"
     const privateKey = "42a0734d132d836a5dce3b386b8e70f76478827d"
     const ts = 1;
@@ -26,9 +29,9 @@ class CharacterList extends React.Component {
     axios.get(url)
       .then(response => {
         console.log(response.data.data.results)
-        let charList = response.data.data.results
+        let comicList = response.data.data.results
         this.setState({
-          data: charList
+          data: comicList
         })
       })
       .catch(error => console.log(error))  
@@ -36,10 +39,11 @@ class CharacterList extends React.Component {
   render() {
     const {data} = this.state;
     return (
-    <ul>
-      {data.map(char => 
-        <li key={char.id} style={listColor}>{char.name}</li>)}
-    </ul>
+    <div>
+    {data.map(char => 
+      <img src={char.thumbnail.path} key={char.id} />
+    )}
+    </div>  
     )
   }
 }
